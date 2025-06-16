@@ -53,6 +53,7 @@ h5{
   font-size: 23px;
   color: white;
   transition: transform 0.5s;
+  text-shadow: 2px 1px 1px black;
 }
 
 h5:hover{
