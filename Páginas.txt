@@ -1,0 +1,9 @@
+Páginas 
+
+1 início = tem
+2 sobre = fazer
+3 notícias = fazer
+4 eventos = fazer
+5 inscrições = tem 
+6 ingressos = fazer
+
