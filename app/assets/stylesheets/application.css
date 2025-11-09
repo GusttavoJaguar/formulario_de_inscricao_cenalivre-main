@@ -1,0 +1,123 @@
+/*
+ * This is a manifest file that'll be compiled into application.css.
+ *
+ * With Propshaft, assets are served efficiently without preprocessing steps. You can still include
+ * application-wide styles in this file, but keep in mind that CSS precedence will follow the standard
+ * cascading order, meaning styles declared later in the document or manifest will override earlier ones,
+ * depending on specificity.
+ *
+ * Consider organizing styles into separate files for maintainability.
+ */
+ @import "bootstrap";
+ @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+ body {
+    background-color: black !important; /* Força a cor de fundo preta */
+   /* background: url(bg.png) center/cover no-repeat fixed; */ /* Insere a imagem de fundo */
+    color: white !important; /* Força a cor do texto branca */
+}
+
+.navbar {
+    background-color: #333; /* Cor de fundo escura para a navbar */
+}
+
+
+
+
+
+a {
+    color: white; /* Links brancos */
+}
+
+a:hover {
+    color: lightgray; /* Cor dos links ao passar o mouse */
+}
+
+.card{
+    transition: 0.3s;
+}
+.card:hover {
+    transform: scale(1.05);
+}
+
+.logo {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 50%;
+    text-align: center;
+}
+
+:host {
+          display: block;
+          background: black;
+          color: white;
+          padding: 3rem 1rem;
+          border-top: 1px solid #333;
+
+}
+
+
+.footer-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    gap: 2rem;
+    text-align: center;
+}
+.footer-logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #FFD700;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.footer-links h3 {
+    color: #FF4500;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+.footer-links li {
+    margin-bottom: 0.5rem;
+}
+.footer-links a {
+    color: #aaa;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+.footer-links a:hover {
+    color: #FF4500;
+}
+.social-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+.social-links a {
+    color: white;
+    background: #333;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+}
+.social-links a:hover {
+    background: #FF4500;
+    transform: translateY(-3px);
+}
+.copyright {
+    text-align: center;
+    margin-top: 3rem;
+    padding-top: 1rem;
+    border-top: 1px solid #333;
+    color: #666;
+    font-size: 0.9rem;
+}

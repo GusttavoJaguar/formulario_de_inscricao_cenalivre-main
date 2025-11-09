@@ -1,0 +1,48 @@
+<%= form_with(model: evento) do |form| %>
+  <% if evento.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(evento.errors.count, "error") %> prohibited this evento from being saved:</h2>
+
+      <ul>
+        <% evento.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :nome, style: "display: block" %>
+    <%= form.text_field :nome %>
+  </div>
+
+  <div>
+    <%= form.label :descricao, style: "display: block" %>
+    <%= form.text_field :descricao %>
+  </div>
+
+  <div>
+    <%= form.label :local, style: "display: block" %>
+    <%= form.text_field :local %>
+  </div>
+
+  <div>
+    <%= form.label :data, style: "display: block" %>
+    <%= form.datetime_field :data %>
+  </div>
+
+  <div>
+    <%= form.label :link_ingresso, style: "display: block" %>
+    <%= form.text_field :link_ingresso %>
+  </div>
+
+  <br>
+  <div>
+    <%= form.file_field :image %><br>
+    
+  </div>
+  <br>
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

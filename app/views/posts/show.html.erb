@@ -1,0 +1,28 @@
+  <div class="card bg-dark p-3 text-white">
+  <h2><%= @post.titulo %></h2>
+
+    <div id="post">
+      <%= simple_format @post.conteudo %>
+    </div>
+</div>
+    <hr/>
+
+<h3>Comentários</h3>
+<div id="comments">
+  <% if @post.comments.any? %>
+    <%= render :partial => "comments/comment", collection: @post.comments %>
+  <% else %>
+    <p>No comments yet.</p>
+  <% end %>
+</div>
+<%= render "comments/form", post: @post, comment: Comment.new, class: "new_comment", id: "new_comment", as: :comment %>
+
+<div class="text-center">
+  <%= link_to "Editar", edit_post_path(@post), class:'text-white btn btn-secondary p-2' %> <br><br>
+  <%= link_to "Mostrar todos", posts_path, class:'text-white btn btn-primary p-2' %>
+</div>
+  <br>
+<div class="text-center">
+  <%= button_to "Apagar", @post, method: :delete , class:'text-white btn btn-danger p-2', 
+  data: { confirm: "Você tem certeza?" } %>
+</div>

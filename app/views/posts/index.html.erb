@@ -1,0 +1,15 @@
+<p style="color: green"><%= notice %></p>
+
+<% content_for :titulo, "Posts" %>
+
+<h1 align="center">Postagens</h1>
+<div id="posts">
+  <% @posts.each do |post| %>
+    <%= simple_format render post %>
+    
+    <hr>
+  <% end %>
+</div>
+<div class="text-center">
+  <%= link_to "Criar post", new_post_path, class:'text-white btn btn-success p-2' %>
+</div>

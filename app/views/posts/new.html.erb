@@ -1,0 +1,11 @@
+<% content_for :titulo, "New post" %>
+
+<h1>New post</h1>
+
+<%= render "form", post: @post %>
+
+<br>
+
+<div class="text-center">
+  <%= link_to "Mostrar todos", posts_path, class:'text-white btn btn-primary p-2' %>
+</div>

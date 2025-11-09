@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+  <p style="color: green"><%= notice %></p>
+
+    <%= render "form" %>
+
+    <div>
+      <%= link_to "Edit this inscricao", admin_inscricaos_path(@inscricao) %> |
+      <%= link_to "Back to inscricaos", admin_inscricaos_path %>
+
+      <%= button_to "Destroy this inscricao", @inscricao, method: :delete %>
+    </div>
+</html>
